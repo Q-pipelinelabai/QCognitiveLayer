@@ -1,126 +1,122 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif">
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 z" fill="#7c6cf0"/>
+    </marker>
+  </defs>
   <rect width="1200" height="675" fill="#0d0f14"/>
   <rect width="1200" height="4" fill="#7c6cf0"/>
 
-  <!-- TITLE AREA -->
-  <text x="60" y="68" fill="#e8eaf0" font-size="42" font-weight="800" letter-spacing="-1">QCognitiveLayer</text>
-  <rect x="60" y="80" width="440" height="2" fill="#7c6cf0" opacity="0.4"/>
-  <text x="60" y="108" fill="#a59fff" font-size="16">Dynamic cognitive memory layer for LLMs — learns as you talk</text>
-  <text x="1140" y="68" fill="#252830" font-size="13" text-anchor="end">slide 1 / 3</text>
+  <!-- TITLE -->
+  <text x="60" y="64" fill="#e8eaf0" font-size="42" font-weight="800" letter-spacing="-0.5">QCognitiveLayer</text>
+  <text x="60" y="90" fill="#5e6375" font-size="14">Dynamic cognitive memory layer for LLMs — learns as you talk</text>
+  <text x="1140" y="64" fill="#252830" font-size="12" text-anchor="end">1 / 3</text>
+  <line x1="60" y1="107" x2="1140" y2="107" stroke="#1a1e28" stroke-width="1"/>
 
-  <line x1="60" y1="128" x2="1140" y2="128" stroke="#1e2028" stroke-width="1"/>
+  <!-- ══ LEFT PANEL ══ -->
+  <rect x="44" y="116" width="512" height="432" rx="10" fill="#101218" stroke="#1e2230"/>
+  <rect x="44" y="116" width="512" height="40" rx="10" fill="#1c1824"/>
+  <rect x="44" y="148" width="512" height="8" fill="#1c1824"/>
+  <text x="300" y="141" text-anchor="middle" fill="#c04444" font-size="11" font-weight="700" letter-spacing="1.5">THE PROBLEM — Why existing approaches fall short</text>
 
-  <!-- LEFT PANEL: THE PROBLEM -->
-  <rect x="52" y="140" width="510" height="410" rx="10" fill="#10121a" stroke="#1e2028"/>
-  <rect x="52" y="140" width="510" height="42" rx="10" fill="#1a1c26"/>
-  <rect x="52" y="168" width="510" height="14" fill="#1a1c26"/>
-  <text x="82" y="168" fill="#e05252" font-size="11" font-weight="700" letter-spacing="2">THE PROBLEM — Why LLMs forget</text>
+  <!-- item 1  y=164 -->
+  <rect x="66" y="166" width="22" height="22" rx="4" fill="#2a1a1a"/>
+  <text x="77" y="181" text-anchor="middle" fill="#e05050" font-size="13" font-weight="700">✕</text>
+  <text x="100" y="180" fill="#d0d3dc" font-size="13.5" font-weight="600">Hard context-window ceiling</text>
+  <text x="100" y="197" fill="#5a5e70" font-size="12">Everything beyond the token limit is permanently lost.</text>
 
-  <!-- Problem items -->
-  <g fill="#8b90a0" font-size="14.5">
-    <!-- 1 -->
-    <rect x="76" y="200" width="22" height="22" rx="4" fill="#2a1a1a"/>
-    <text x="87" y="215" fill="#e05252" font-size="13" text-anchor="middle" font-weight="700">✕</text>
-    <text x="110" y="213" fill="#d0d3dc" font-size="14" font-weight="600">Context window is a hard ceiling</text>
-    <text x="110" y="232" fill="#6b7080" font-size="12.5">Everything outside the last N tokens is gone — permanently.</text>
+  <!-- item 2  y=216 -->
+  <rect x="66" y="218" width="22" height="22" rx="4" fill="#2a1a1a"/>
+  <text x="77" y="233" text-anchor="middle" fill="#e05050" font-size="13" font-weight="700">✕</text>
+  <text x="100" y="232" fill="#d0d3dc" font-size="13.5" font-weight="600">RAG retrieves similar, not associated</text>
+  <text x="100" y="249" fill="#5a5e70" font-size="12">Nearest-neighbour search misses learned concept bridges.</text>
 
-    <!-- 2 -->
-    <rect x="76" y="258" width="22" height="22" rx="4" fill="#2a1a1a"/>
-    <text x="87" y="273" fill="#e05252" font-size="13" text-anchor="middle" font-weight="700">✕</text>
-    <text x="110" y="271" fill="#d0d3dc" font-size="14" font-weight="600">RAG retrieves similar, not associated</text>
-    <text x="110" y="290" fill="#6b7080" font-size="12.5">Nearest-neighbour search misses learned bridges between concepts.</text>
+  <!-- item 3  y=268 -->
+  <rect x="66" y="270" width="22" height="22" rx="4" fill="#2a1a1a"/>
+  <text x="77" y="285" text-anchor="middle" fill="#e05050" font-size="13" font-weight="700">✕</text>
+  <text x="100" y="284" fill="#d0d3dc" font-size="13.5" font-weight="600">Zero reinforcement across sessions</text>
+  <text x="100" y="301" fill="#5a5e70" font-size="12">Every conversation starts blank — nothing compounds.</text>
 
-    <!-- 3 -->
-    <rect x="76" y="316" width="22" height="22" rx="4" fill="#2a1a1a"/>
-    <text x="87" y="331" fill="#e05252" font-size="13" text-anchor="middle" font-weight="700">✕</text>
-    <text x="110" y="329" fill="#d0d3dc" font-size="14" font-weight="600">No reinforcement across sessions</text>
-    <text x="110" y="348" fill="#6b7080" font-size="12.5">Every conversation starts blank. Nothing strengthens with use.</text>
+  <!-- item 4  y=320 -->
+  <rect x="66" y="322" width="22" height="22" rx="4" fill="#2a1a1a"/>
+  <text x="77" y="337" text-anchor="middle" fill="#e05050" font-size="13" font-weight="700">✕</text>
+  <text x="100" y="336" fill="#d0d3dc" font-size="13.5" font-weight="600">Chunks, not conversations</text>
+  <text x="100" y="353" fill="#5a5e70" font-size="12">One sentence returned; the context around it is lost.</text>
 
-    <!-- 4 -->
-    <rect x="76" y="374" width="22" height="22" rx="4" fill="#2a1a1a"/>
-    <text x="87" y="389" fill="#e05252" font-size="13" text-anchor="middle" font-weight="700">✕</text>
-    <text x="110" y="387" fill="#d0d3dc" font-size="14" font-weight="600">Chunks — not conversations</text>
-    <text x="110" y="406" fill="#6b7080" font-size="12.5">A sentence is recalled; the conversation that gave it meaning is not.</text>
+  <!-- item 5  y=372 -->
+  <rect x="66" y="374" width="22" height="22" rx="4" fill="#2a1a1a"/>
+  <text x="77" y="389" text-anchor="middle" fill="#e05050" font-size="13" font-weight="700">✕</text>
+  <text x="100" y="388" fill="#d0d3dc" font-size="13.5" font-weight="600">Opaque cosine similarity scores</text>
+  <text x="100" y="405" fill="#5a5e70" font-size="12">No way to trace why a particular chunk was retrieved.</text>
 
-    <!-- 5 -->
-    <rect x="76" y="432" width="22" height="22" rx="4" fill="#2a1a1a"/>
-    <text x="87" y="447" fill="#e05252" font-size="13" text-anchor="middle" font-weight="700">✕</text>
-    <text x="110" y="445" fill="#d0d3dc" font-size="14" font-weight="600">Opaque cosine scores</text>
-    <text x="110" y="464" fill="#6b7080" font-size="12.5">Why was this retrieved? Impossible to trace or debug.</text>
-  </g>
+  <line x1="66" y1="422" x2="540" y2="422" stroke="#1e2230" stroke-width="1"/>
+  <text x="300" y="444" text-anchor="middle" fill="#403848" font-size="12" font-style="italic">Result: LLMs feel amnesiac even when answers are "in there"</text>
 
-  <!-- VS BADGE -->
-  <circle cx="600" cy="345" r="28" fill="#1a1c26" stroke="#7c6cf0" stroke-width="1.5"/>
-  <text x="600" y="351" fill="#7c6cf0" font-size="15" font-weight="800" text-anchor="middle">VS</text>
-  <line x1="600" y1="160" x2="600" y2="315" stroke="#1e2028" stroke-width="1" stroke-dasharray="4,4"/>
-  <line x1="600" y1="375" x2="600" y2="548" stroke="#1e2028" stroke-width="1" stroke-dasharray="4,4"/>
+  <!-- VS -->
+  <line x1="600" y1="128" x2="600" y2="316" stroke="#252830" stroke-width="1" stroke-dasharray="4,4"/>
+  <circle cx="600" cy="344" r="26" fill="#12141e" stroke="#7c6cf0" stroke-width="1.5"/>
+  <text x="600" y="350" text-anchor="middle" fill="#7c6cf0" font-size="15" font-weight="800">VS</text>
+  <line x1="600" y1="372" x2="600" y2="546" stroke="#252830" stroke-width="1" stroke-dasharray="4,4"/>
 
-  <!-- RIGHT PANEL: THE SOLUTION -->
-  <rect x="638" y="140" width="510" height="410" rx="10" fill="#0f1220" stroke="#7c6cf0" stroke-width="1" stroke-opacity="0.4"/>
-  <rect x="638" y="140" width="510" height="42" rx="10" fill="#1a1d30"/>
-  <rect x="638" y="168" width="510" height="14" fill="#1a1d30"/>
-  <text x="668" y="168" fill="#a59fff" font-size="11" font-weight="700" letter-spacing="2">THE SOLUTION — Izolojik associative memory</text>
+  <!-- ══ RIGHT PANEL ══ -->
+  <rect x="644" y="116" width="512" height="432" rx="10" fill="#0e1020" stroke="#7c6cf0" stroke-opacity="0.5"/>
+  <rect x="644" y="116" width="512" height="40" rx="10" fill="#181c34"/>
+  <rect x="644" y="148" width="512" height="8" fill="#181c34"/>
+  <text x="900" y="141" text-anchor="middle" fill="#a59fff" font-size="11" font-weight="700" letter-spacing="1.5">THE SOLUTION — Izolojik associative memory</text>
 
-  <!-- Solution items -->
-  <g font-size="14.5">
-    <!-- 1 -->
-    <rect x="662" y="200" width="22" height="22" rx="4" fill="#1a2a1a"/>
-    <text x="673" y="215" fill="#4caf82" font-size="13" text-anchor="middle" font-weight="700">✓</text>
-    <text x="696" y="213" fill="#d0d3dc" font-size="14" font-weight="600">Spreading activation over bond graph</text>
-    <text x="696" y="232" fill="#6b7080" font-size="12.5">"team" → activates → "Fenerbahçe" via a learned co-occurrence edge.</text>
+  <!-- item 1 -->
+  <rect x="666" y="166" width="22" height="22" rx="4" fill="#1a2a1a"/>
+  <text x="677" y="181" text-anchor="middle" fill="#4caf82" font-size="13" font-weight="700">✓</text>
+  <text x="700" y="180" fill="#d0d3dc" font-size="13.5" font-weight="600">Spreading activation on bond graph</text>
+  <text x="700" y="197" fill="#5a5e70" font-size="12">"team" → learned edge → "Arsenal" — multi-hop bridging.</text>
 
-    <!-- 2 -->
-    <rect x="662" y="258" width="22" height="22" rx="4" fill="#1a2a1a"/>
-    <text x="673" y="273" fill="#4caf82" font-size="13" text-anchor="middle" font-weight="700">✓</text>
-    <text x="696" y="271" fill="#d0d3dc" font-size="14" font-weight="600">Hebbian learning — strengthens with use</text>
-    <text x="696" y="290" fill="#6b7080" font-size="12.5">Co-recalled concepts build stronger bonds. Memory deepens over time.</text>
+  <!-- item 2 -->
+  <rect x="666" y="218" width="22" height="22" rx="4" fill="#1a2a1a"/>
+  <text x="677" y="233" text-anchor="middle" fill="#4caf82" font-size="13" font-weight="700">✓</text>
+  <text x="700" y="232" fill="#d0d3dc" font-size="13.5" font-weight="600">Hebbian learning — bonds compound with use</text>
+  <text x="700" y="249" fill="#5a5e70" font-size="12">Co-recalled concepts grow stronger across sessions.</text>
 
-    <!-- 3 -->
-    <rect x="662" y="316" width="22" height="22" rx="4" fill="#1a2a1a"/>
-    <text x="673" y="331" fill="#4caf82" font-size="13" text-anchor="middle" font-weight="700">✓</text>
-    <text x="696" y="329" fill="#d0d3dc" font-size="14" font-weight="600">Hierarchical recall: sentence → conversation</text>
-    <text x="696" y="348" fill="#6b7080" font-size="12.5">Most relevant conversation is found first; its full content returns.</text>
+  <!-- item 3 -->
+  <rect x="666" y="270" width="22" height="22" rx="4" fill="#1a2a1a"/>
+  <text x="677" y="285" text-anchor="middle" fill="#4caf82" font-size="13" font-weight="700">✓</text>
+  <text x="700" y="284" fill="#d0d3dc" font-size="13.5" font-weight="600">Hierarchy: sentence → whole conversation</text>
+  <text x="700" y="301" fill="#5a5e70" font-size="12">Most relevant chat surfaces complete — months later too.</text>
 
-    <!-- 4 -->
-    <rect x="662" y="374" width="22" height="22" rx="4" fill="#1a2a1a"/>
-    <text x="673" y="389" fill="#4caf82" font-size="13" text-anchor="middle" font-weight="700">✓</text>
-    <text x="696" y="387" fill="#d0d3dc" font-size="14" font-weight="600">π-addressed sentences (golden angle)</text>
-    <text x="696" y="406" fill="#6b7080" font-size="12.5">θ_k = 2π · frac(k/φ) — non-repeating, canonical order in memory.</text>
+  <!-- item 4 -->
+  <rect x="666" y="322" width="22" height="22" rx="4" fill="#1a2a1a"/>
+  <text x="677" y="337" text-anchor="middle" fill="#4caf82" font-size="13" font-weight="700">✓</text>
+  <text x="700" y="336" fill="#d0d3dc" font-size="13.5" font-weight="600">π-addressed sentences (golden angle)</text>
+  <text x="700" y="353" fill="#5a5e70" font-size="12">θ_k = 2π·frac(k/φ) — non-repeating canonical position.</text>
 
-    <!-- 5 -->
-    <rect x="662" y="432" width="22" height="22" rx="4" fill="#1a2a1a"/>
-    <text x="673" y="447" fill="#4caf82" font-size="13" text-anchor="middle" font-weight="700">✓</text>
-    <text x="696" y="445" fill="#d0d3dc" font-size="14" font-weight="600">Transparent &amp; fully deterministic</text>
-    <text x="696" y="464" fill="#6b7080" font-size="12.5">Every recall is traceable to a concept node and its bridge path.</text>
-  </g>
+  <!-- item 5 -->
+  <rect x="666" y="374" width="22" height="22" rx="4" fill="#1a2a1a"/>
+  <text x="677" y="389" text-anchor="middle" fill="#4caf82" font-size="13" font-weight="700">✓</text>
+  <text x="700" y="388" fill="#d0d3dc" font-size="13.5" font-weight="600">Deterministic and fully traceable</text>
+  <text x="700" y="405" fill="#5a5e70" font-size="12">Every recall path auditable to its concept bridge node.</text>
 
-  <!-- BOTTOM STATS BAR -->
-  <rect x="0" y="575" width="1200" height="100" fill="#0a0c10"/>
-  <line x1="0" y1="575" x2="1200" y2="575" stroke="#1e2028" stroke-width="1"/>
+  <line x1="666" y1="422" x2="1140" y2="422" stroke="#1e2230" stroke-width="1"/>
+  <text x="900" y="444" text-anchor="middle" fill="#3a4058" font-size="12" font-style="italic">Result: memory deepens over time — like a mind, not a search engine</text>
 
-  <!-- Stat 1 -->
-  <text x="175" y="620" fill="#a59fff" font-size="32" font-weight="800" text-anchor="middle">96%</text>
-  <text x="175" y="644" fill="#8b90a0" font-size="12.5" text-anchor="middle">recall accuracy</text>
-  <text x="175" y="660" fill="#555a6a" font-size="11.5" text-anchor="middle">500-turn benchmark</text>
+  <!-- ══ STATS BAR ══ -->
+  <rect x="0" y="558" width="1200" height="117" fill="#080a0f"/>
+  <line x1="0" y1="558" x2="1200" y2="558" stroke="#1a1e28"/>
 
-  <line x1="340" y1="590" x2="340" y2="660" stroke="#1e2028" stroke-width="1"/>
+  <text x="162" y="608" text-anchor="middle" fill="#a59fff" font-size="34" font-weight="800">96%</text>
+  <text x="162" y="631" text-anchor="middle" fill="#6b7080" font-size="12.5">recall accuracy</text>
+  <text x="162" y="649" text-anchor="middle" fill="#3a3f50" font-size="11.5">500-turn benchmark</text>
+  <line x1="324" y1="572" x2="324" y2="648" stroke="#1a1e28"/>
 
-  <!-- Stat 2 -->
-  <text x="490" y="620" fill="#a59fff" font-size="32" font-weight="800" text-anchor="middle">0</text>
-  <text x="490" y="644" fill="#8b90a0" font-size="12.5" text-anchor="middle">core dependencies</text>
-  <text x="490" y="660" fill="#555a6a" font-size="11.5" text-anchor="middle">Python 3.9+ stdlib only</text>
+  <text x="462" y="608" text-anchor="middle" fill="#a59fff" font-size="34" font-weight="800">zero</text>
+  <text x="462" y="631" text-anchor="middle" fill="#6b7080" font-size="12.5">core dependencies</text>
+  <text x="462" y="649" text-anchor="middle" fill="#3a3f50" font-size="11.5">Python 3.9+ stdlib only</text>
+  <line x1="612" y1="572" x2="612" y2="648" stroke="#1a1e28"/>
 
-  <line x1="660" y1="590" x2="660" y2="660" stroke="#1e2028" stroke-width="1"/>
+  <text x="784" y="602" text-anchor="middle" fill="#a59fff" font-size="22" font-weight="800">Gemini + Ollama</text>
+  <text x="784" y="626" text-anchor="middle" fill="#6b7080" font-size="12.5">LLM backends supported</text>
+  <text x="784" y="644" text-anchor="middle" fill="#3a3f50" font-size="11.5">model-agnostic memory layer</text>
+  <line x1="952" y1="572" x2="952" y2="648" stroke="#1a1e28"/>
 
-  <!-- Stat 3 -->
-  <text x="820" y="620" fill="#a59fff" font-size="22" font-weight="800" text-anchor="middle">Gemini + Ollama</text>
-  <text x="820" y="644" fill="#8b90a0" font-size="12.5" text-anchor="middle">LLM backends</text>
-  <text x="820" y="660" fill="#555a6a" font-size="11.5" text-anchor="middle">swap via /settings, memory is model-agnostic</text>
-
-  <line x1="990" y1="590" x2="990" y2="660" stroke="#1e2028" stroke-width="1"/>
-
-  <!-- Stat 4 -->
-  <text x="1100" y="620" fill="#a59fff" font-size="32" font-weight="800" text-anchor="middle">MIT</text>
-  <text x="1100" y="644" fill="#8b90a0" font-size="12.5" text-anchor="middle">open source license</text>
-  <text x="1100" y="660" fill="#555a6a" font-size="11.5" text-anchor="middle">github.com/Q-pipelinelabai</text>
+  <text x="1076" y="608" text-anchor="middle" fill="#a59fff" font-size="34" font-weight="800">MIT</text>
+  <text x="1076" y="631" text-anchor="middle" fill="#6b7080" font-size="12.5">open source license</text>
+  <text x="1076" y="649" text-anchor="middle" fill="#3a3f50" font-size="11.5">github.com/Q-pipelinelabai</text>
 </svg>

@@ -28,15 +28,15 @@ from engine.memory import Memory
 mem = Memory()
 
 # store a conversation turn
-mem.remember("My daughter's name is Elif.", ts=time.time(), season="chat-1", role="user")
-mem.remember("Noted — Elif.", ts=time.time(), season="chat-1", role="assistant")
+mem.remember("My daughter's name is Alice.", ts=time.time(), season="chat-1", role="user")
+mem.remember("Noted — Alice.", ts=time.time(), season="chat-1", role="assistant")
 mem.save("data/checkpoints/memory.pkl")
 
 # later, in any session
 mem = Memory.load("data/checkpoints/memory.pkl")
 result = mem.recall("What is my daughter's name?", hops=3, k=5)
 for chunk in result["chunks"]:
-    print(chunk["text"])   # → "My daughter's name is Elif."
+    print(chunk["text"])   # → "My daughter's name is Alice."
 ```
 
 `Memory` has zero runtime dependencies (Python 3.9+ stdlib).
@@ -90,7 +90,7 @@ It does **not** embed text, train a model, or manage the LLM. It manages the mem
 | | Vector-DB RAG | **QCognitiveLayer** |
 |---|---|---|
 | Retrieval | nearest-neighbour on embeddings | spreading activation over a learned bond graph |
-| Multi-hop | ✗ | ✓ `team` → `Fenerbahçe` via a learned co-occurrence edge |
+| Multi-hop | ✗ | ✓ `team` → `Arsenal` via a learned co-occurrence edge |
 | Reinforcement | static index | Hebbian — co-recalled concepts strengthen over time |
 | Unit of recall | a chunk | sentence → *whole conversation* → its sibling sentences |
 | Saliency | uniform | IDF — rare / meaningful concepts outweigh filler |
@@ -165,7 +165,7 @@ docs/ARCHITECTURE.md  data structures, recall mathematics, tuning knobs
 
 ## Honest limitations
 
-- **Semantic gaps without shared context** — if `"team"` and `"Fenerbahçe"` were never co-mentioned,
+- **Semantic gaps without shared context** — if `"team"` and `"Arsenal"` were never co-mentioned,
   no bond exists. A cosine²/embedding collapse layer (roadmap) closes this.
 - **Lemmatization is optional** — without Zemberek, Turkish inflections don't merge (weaker recall,
   still functional).
