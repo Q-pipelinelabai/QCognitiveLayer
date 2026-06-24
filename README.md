@@ -4,6 +4,8 @@
 
 ### An **izolojik associative-memory layer** for Large Language Models
 
+*Dynamic cognitive memory layer for LLMs — learns as you talk.*
+
 *Drop it into any LLM project. It remembers conversations the way a mind does —
 by association, hierarchy, and recall — not by nearest-neighbour lookup.*
 
