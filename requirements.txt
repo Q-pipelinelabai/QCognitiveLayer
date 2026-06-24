@@ -1,0 +1,7 @@
+# Cognitive Layer — çekirdek SIFIR bağımlılık (Python 3.9+ stdlib yeterli).
+# Aşağıdakiler İLERİDE (yol haritası) için opsiyoneldir:
+#
+# numpy            # ölçekli yayılım (sparse) / çökme motoru vektörleri
+# zemberek-python  # Türkçe lemmatizasyon (vocab temizliği)
+#
+# LLM erişimi stdlib urllib ile yapılır (ek paket gerekmez).

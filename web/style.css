@@ -1,0 +1,83 @@
+:root{
+  --bg:#0e0f13; --panel:#15171d; --panel2:#1b1e26; --fg:#e6e8ee; --muted:#8b90a0;
+  --primary:#9a7cff; --primary-dim:#6b5bd2; --line:#262a35; --user:#1f2330; --bot:#15171d;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 -apple-system,Segoe UI,Roboto,sans-serif}
+#app{display:flex;height:100vh}
+
+/* SOL PANEL */
+#sidebar{width:248px;flex:0 0 248px;background:var(--panel);border-right:1px solid var(--line);
+  display:flex;flex-direction:column;padding:14px 12px;gap:10px}
+.brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:18px;letter-spacing:.2px}
+.brand .dot{width:10px;height:10px;border-radius:50%;background:var(--primary);box-shadow:0 0 12px var(--primary)}
+.btn-new{background:var(--panel2);color:var(--fg);border:1px solid var(--line);border-radius:9px;
+  padding:9px;cursor:pointer;font-size:14px}
+.btn-new:hover{border-color:var(--primary-dim)}
+#seasonList{flex:1;overflow:auto;display:flex;flex-direction:column;gap:4px;margin-top:4px}
+.season{display:flex;align-items:center;gap:6px;padding:8px 8px 8px 10px;border-radius:8px;cursor:pointer;
+  color:var(--muted);font-size:14px}
+.season:hover{background:var(--panel2);color:var(--fg)}
+.season.active{background:var(--panel2);color:var(--fg);border-left:2px solid var(--primary)}
+.season .s-name{flex:1;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.season small{display:block;color:var(--muted);font-size:11px}
+.s-del{opacity:0;flex:0 0 auto;background:none;border:none;color:var(--muted);cursor:pointer;
+  font-size:13px;padding:2px 5px;border-radius:5px;transition:opacity .12s}
+.season:hover .s-del{opacity:.7}
+.s-del:hover{opacity:1;color:#f87171;background:rgba(248,113,113,.12)}
+.mem-stats{color:var(--muted);font-size:11px;border-top:1px solid var(--line);padding-top:8px}
+
+/* ANA ALAN */
+#main{flex:1;display:flex;flex-direction:column;min-width:0}
+#topbar{height:52px;border-bottom:1px solid var(--line);display:flex;align-items:center;
+  justify-content:space-between;padding:0 18px;background:var(--panel)}
+#topbar .title{font-weight:600;color:var(--fg);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gear{background:none;border:none;color:var(--muted);font-size:20px;cursor:pointer}
+.gear:hover{color:var(--fg)}
+
+#chat{flex:1;overflow:auto;padding:24px 0}
+.msg{max-width:760px;margin:0 auto 18px;padding:0 24px;display:flex;gap:12px}
+.msg .who{flex:0 0 30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700}
+.msg.user .who{background:var(--primary-dim);color:#fff}
+.msg.bot .who{background:var(--panel2);color:var(--primary);border:1px solid var(--line)}
+.msg .body{flex:1;white-space:pre-wrap;word-wrap:break-word;padding-top:4px}
+.msg.bot .body{color:var(--fg)}
+.recall-note{max-width:760px;margin:-8px auto 14px;padding:0 24px 0 66px;color:var(--muted);font-size:12px}
+.recall-note details summary{cursor:pointer}
+.recall-note li{margin:2px 0}
+.empty{max-width:760px;margin:10vh auto;text-align:center;color:var(--muted)}
+
+#composer{border-top:1px solid var(--line);padding:14px 24px;display:flex;gap:10px;
+  max-width:808px;margin:0 auto;width:100%}
+#input{flex:1;resize:none;background:var(--panel2);color:var(--fg);border:1px solid var(--line);
+  border-radius:11px;padding:12px 14px;font:inherit;max-height:200px}
+#input:focus{outline:none;border-color:var(--primary-dim)}
+#send{background:var(--primary);color:#fff;border:none;border-radius:11px;padding:0 20px;cursor:pointer;font-weight:600}
+#send:disabled{opacity:.5;cursor:default}
+
+/* AYARLAR */
+#settingsOverlay{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:10}
+#settingsOverlay.hidden{display:none}
+#settings{background:var(--panel);border:1px solid var(--line);border-radius:14px;width:380px;padding:20px;
+  display:flex;flex-direction:column;gap:9px}
+.s-head{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:16px;margin-bottom:6px}
+.s-head button{background:none;border:none;color:var(--muted);font-size:16px;cursor:pointer}
+#settings label{color:var(--muted);font-size:13px;margin-top:6px}
+#settings input[type=range]{width:100%}
+#settings select,#settings input[type=password]{background:var(--panel2);color:var(--fg);
+  border:1px solid var(--line);border-radius:8px;padding:9px}
+.btn-save{background:var(--primary);color:#fff;border:none;border-radius:9px;padding:10px;cursor:pointer;
+  font-weight:600;margin-top:10px}
+.s-note{color:var(--muted);font-size:11px;margin-top:4px}
+.hidden{display:none}
+.typing{color:var(--muted);font-style:italic}
+
+/* SCROLLBAR — ince gri çizgi, zemin yok */
+*{scrollbar-width:thin;scrollbar-color:#3a3f4b transparent}
+::-webkit-scrollbar{width:7px;height:7px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#3a3f4b;border-radius:6px;border:2px solid transparent;background-clip:content-box}
+::-webkit-scrollbar-thumb:hover{background:#4c5160;background-clip:content-box}
+::-webkit-scrollbar-corner{background:transparent}

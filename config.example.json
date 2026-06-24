@@ -1,0 +1,5 @@
+{
+  "hops": 4,
+  "model": "gemini:gemini-3.5-flash",
+  "api_key": ""
+}

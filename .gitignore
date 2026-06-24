@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+# kullanıcı verisi + API anahtarları — paylaşma
+data/config.json
+data/checkpoints/*.pkl
+data/seasons/*.json
+.DS_Store

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Qcognitive</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- LEFT PANEL: CHATS -->
+  <aside id="sidebar">
+    <div class="brand"><span class="dot"></span>Qcognitive</div>
+    <button id="newSeason" class="btn-new" data-i18n="newChat">+ New chat</button>
+    <div id="seasonList"></div>
+    <div class="mem-stats" id="memStats"></div>
+  </aside>
+
+  <!-- MAIN -->
+  <main id="main">
+    <header id="topbar">
+      <div class="title" id="seasonTitle">—</div>
+      <button id="settingsBtn" class="gear" title="Settings">⚙</button>
+    </header>
+
+    <div id="chat"></div>
+
+    <div id="composer">
+      <textarea id="input" rows="1" data-i18n-ph="composer" placeholder="Type a message…"></textarea>
+      <button id="send" data-i18n="send">Send</button>
+    </div>
+  </main>
+
+  <!-- SETTINGS -->
+  <div id="settingsOverlay" class="hidden">
+    <div id="settings">
+      <div class="s-head"><span data-i18n="settings">Settings</span> <button id="settingsClose">✕</button></div>
+
+      <label data-i18n="language">Language</label>
+      <select id="lang">
+        <option value="en">English</option>
+        <option value="tr">Türkçe</option>
+      </select>
+
+      <label><span data-i18n="hops">Active neuron depth (hops)</span>: <b id="hopVal">3</b></label>
+      <input type="range" id="hops" min="2" max="7" step="1" value="3">
+
+      <label data-i18n="model">LLM model</label>
+      <select id="model"></select>
+
+      <label data-i18n="apiKey">Gemini API key</label>
+      <input type="password" id="apiKey" placeholder="(Gemini only)">
+
+      <button id="saveSettings" class="btn-save" data-i18n="save">Save</button>
+      <div class="s-note" data-i18n="ollamaNote">If Ollama is running locally, its models are listed automatically.</div>
+    </div>
+  </div>
+
+</div>
+<script src="/app.js"></script>
+</body>
+</html>
