@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif">
+
+  <rect width="1080" height="1080" fill="#0d0f14"/>
+  <rect width="1080" height="6" fill="#7c6cf0"/>
+
+  <!-- ══ NETWORK ART (top section, y=0-380) ══ -->
+
+  <!-- Outer dashed connections (ring2 → ring1) -->
+  <g stroke="#1a1838" stroke-width="1" stroke-dasharray="5,4" fill="none">
+    <line x1="730" y1="190" x2="655" y2="190"/>
+    <line x1="674" y1="56"  x2="598" y2="90"/>
+    <line x1="406" y1="56"  x2="482" y2="90"/>
+    <line x1="350" y1="190" x2="425" y2="190"/>
+    <line x1="406" y1="324" x2="482" y2="290"/>
+    <line x1="674" y1="324" x2="598" y2="290"/>
+  </g>
+
+  <!-- Ring 1 → ring 1 (hexagon edges) -->
+  <g stroke="#221e50" stroke-width="1.4" fill="none">
+    <line x1="655" y1="190" x2="598" y2="90"/>
+    <line x1="598" y1="90"  x2="482" y2="90"/>
+    <line x1="482" y1="90"  x2="425" y2="190"/>
+    <line x1="425" y1="190" x2="482" y2="290"/>
+    <line x1="482" y1="290" x2="598" y2="290"/>
+    <line x1="598" y1="290" x2="655" y2="190"/>
+  </g>
+
+  <!-- Center → ring 1 (main bonds) -->
+  <g stroke="#3a2e80" stroke-width="2" fill="none">
+    <line x1="540" y1="190" x2="655" y2="190"/>
+    <line x1="540" y1="190" x2="598" y2="90"/>
+    <line x1="540" y1="190" x2="482" y2="90"/>
+    <line x1="540" y1="190" x2="425" y2="190"/>
+    <line x1="540" y1="190" x2="482" y2="290"/>
+    <line x1="540" y1="190" x2="598" y2="290"/>
+  </g>
+
+  <!-- Glow halos -->
+  <circle cx="540" cy="190" r="180" fill="#7c6cf0" opacity="0.025"/>
+  <circle cx="540" cy="190" r="120" fill="#7c6cf0" opacity="0.05"/>
+  <circle cx="540" cy="190" r="70"  fill="#7c6cf0" opacity="0.09"/>
+  <circle cx="540" cy="190" r="40"  fill="#7c6cf0" opacity="0.22"/>
+
+  <!-- Ring 2 nodes (tiny, decorative) -->
+  <g fill="#151230" stroke="#222048" stroke-width="1">
+    <circle cx="730" cy="190" r="8"/>
+    <circle cx="674" cy="56"  r="8"/>
+    <circle cx="406" cy="56"  r="8"/>
+    <circle cx="350" cy="190" r="8"/>
+    <circle cx="406" cy="324" r="8"/>
+    <circle cx="674" cy="324" r="8"/>
+  </g>
+
+  <!-- Ring 1 nodes with concept labels -->
+  <!-- recall (right) -->
+  <circle cx="655" cy="190" r="21" fill="#201c50"/>
+  <circle cx="655" cy="190" r="14" fill="#3a3078"/>
+  <text x="655" y="194" text-anchor="middle" fill="#9898d8" font-size="11" font-weight="600">recall</text>
+
+  <!-- bond (top-right) -->
+  <circle cx="598" cy="90" r="18" fill="#201c50"/>
+  <circle cx="598" cy="90" r="12" fill="#3a3078"/>
+  <text x="598" y="94" text-anchor="middle" fill="#9898d8" font-size="11" font-weight="600">bond</text>
+
+  <!-- alice (top-left, green — episodic memory) -->
+  <circle cx="482" cy="90" r="18" fill="#182818"/>
+  <circle cx="482" cy="90" r="12" fill="#2a4828"/>
+  <text x="482" y="94" text-anchor="middle" fill="#5ab878" font-size="11" font-weight="600">alice</text>
+
+  <!-- learn (left) -->
+  <circle cx="425" cy="190" r="21" fill="#201c50"/>
+  <circle cx="425" cy="190" r="14" fill="#3a3078"/>
+  <text x="425" y="194" text-anchor="middle" fill="#9898d8" font-size="11" font-weight="600">learn</text>
+
+  <!-- london (bottom-left, green) -->
+  <circle cx="482" cy="290" r="18" fill="#182818"/>
+  <circle cx="482" cy="290" r="12" fill="#2a4828"/>
+  <text x="482" y="294" text-anchor="middle" fill="#5ab878" font-size="11" font-weight="600">london</text>
+
+  <!-- team (bottom-right, red-ish) -->
+  <circle cx="598" cy="290" r="18" fill="#281818"/>
+  <circle cx="598" cy="290" r="12" fill="#483028"/>
+  <text x="598" y="294" text-anchor="middle" fill="#c08878" font-size="11" font-weight="600">team</text>
+
+  <!-- CENTER NODE -->
+  <circle cx="540" cy="190" r="38" fill="#4c3eb8"/>
+  <circle cx="540" cy="190" r="30" fill="#7c6cf0"/>
+  <text x="540" y="186" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700">LLM</text>
+  <text x="540" y="202" text-anchor="middle" fill="#d0ccff" font-size="10">memory</text>
+
+  <!-- Activation values (subtle) -->
+  <text x="666" y="170" fill="#2e2860" font-size="9">act=0.74</text>
+  <text x="418" y="170" text-anchor="end" fill="#2e2860" font-size="9">act=0.71</text>
+
+  <!-- ══ CONTENT SECTION (y=378+) ══ -->
+  <rect x="0" y="378" width="1080" height="702" fill="#0f1120"/>
+  <rect x="0" y="378" width="1080" height="3" fill="#7c6cf0"/>
+
+  <!-- TITLE -->
+  <text x="540" y="448" text-anchor="middle" fill="#e8eaf0" font-size="54" font-weight="800" letter-spacing="-1">QCognitiveLayer</text>
+  <text x="540" y="492" text-anchor="middle" fill="#7c6cf0" font-size="18" font-weight="600">Long-term memory for LLMs — learns as you talk</text>
+
+  <!-- ══ 4 FEATURE CARDS (2×2 grid) ══ -->
+
+  <!-- Row 1 -->
+  <!-- Card 1 (left): Spreading activation -->
+  <rect x="56" y="520" width="468" height="82" rx="9" fill="#111420" stroke="#252840"/>
+  <rect x="56" y="520" width="5"   height="82" rx="3" fill="#7c6cf0"/>
+  <text x="77" y="547" fill="#a59fff" font-size="15" font-weight="700">Spreading activation</text>
+  <text x="77" y="568" fill="#52566e" font-size="13">Concepts propagate through</text>
+  <text x="77" y="585" fill="#52566e" font-size="13">learned bonds — no shared word needed</text>
+
+  <!-- Card 2 (right): Hebbian learning -->
+  <rect x="556" y="520" width="468" height="82" rx="9" fill="#111420" stroke="#252840"/>
+  <rect x="556" y="520" width="5"   height="82" rx="3" fill="#4caf82"/>
+  <text x="577" y="547" fill="#4caf82" font-size="15" font-weight="700">Hebbian learning</text>
+  <text x="577" y="568" fill="#52566e" font-size="13">Co-recalled concepts grow stronger</text>
+  <text x="577" y="585" fill="#52566e" font-size="13">bonds with every conversation</text>
+
+  <!-- Row 2 -->
+  <!-- Card 3 (left): Hierarchical recall -->
+  <rect x="56" y="618" width="468" height="82" rx="9" fill="#111420" stroke="#252840"/>
+  <rect x="56" y="618" width="5"   height="82" rx="3" fill="#7c6cf0"/>
+  <text x="77" y="645" fill="#a59fff" font-size="15" font-weight="700">Hierarchical recall</text>
+  <text x="77" y="666" fill="#52566e" font-size="13">Sentence → conversation → content</text>
+  <text x="77" y="683" fill="#52566e" font-size="13">A months-old chat comes back whole</text>
+
+  <!-- Card 4 (right): Background learning -->
+  <rect x="556" y="618" width="468" height="82" rx="9" fill="#111420" stroke="#252840"/>
+  <rect x="556" y="618" width="5"   height="82" rx="3" fill="#f0a030"/>
+  <text x="577" y="645" fill="#f0a030" font-size="15" font-weight="700">Background learning</text>
+  <text x="577" y="666" fill="#52566e" font-size="13">Graph updates after every turn</text>
+  <text x="577" y="683" fill="#52566e" font-size="13">Never blocks the response stream</text>
+
+  <!-- ══ STATS ROW ══ -->
+  <line x1="56" y1="722" x2="1024" y2="722" stroke="#1a1e30"/>
+
+  <!-- Stat 1: 96% -->
+  <text x="196" y="782" text-anchor="middle" fill="#7c6cf0" font-size="50" font-weight="800">96%</text>
+  <text x="196" y="812" text-anchor="middle" fill="#52566e" font-size="13">recall accuracy</text>
+  <text x="196" y="830" text-anchor="middle" fill="#32364e" font-size="12">500-turn benchmark</text>
+
+  <line x1="380" y1="736" x2="380" y2="848" stroke="#1a1e30"/>
+
+  <!-- Stat 2: zero deps -->
+  <text x="540" y="782" text-anchor="middle" fill="#7c6cf0" font-size="50" font-weight="800">zero</text>
+  <text x="540" y="812" text-anchor="middle" fill="#52566e" font-size="13">core dependencies</text>
+  <text x="540" y="830" text-anchor="middle" fill="#32364e" font-size="12">Python 3.9+ stdlib only</text>
+
+  <line x1="700" y1="736" x2="700" y2="848" stroke="#1a1e30"/>
+
+  <!-- Stat 3: backends -->
+  <text x="862" y="770" text-anchor="middle" fill="#7c6cf0" font-size="22" font-weight="800">Gemini + Ollama</text>
+  <text x="862" y="800" text-anchor="middle" fill="#52566e" font-size="13">LLM backends</text>
+  <text x="862" y="820" text-anchor="middle" fill="#32364e" font-size="12">model-agnostic memory layer</text>
+
+  <line x1="56" y1="860" x2="1024" y2="860" stroke="#1a1e30"/>
+
+  <!-- ══ CTA ══ -->
+  <rect x="140" y="882" width="800" height="62" rx="10" fill="#16193a" stroke="#7c6cf0" stroke-width="1.5"/>
+  <text x="540" y="916" text-anchor="middle" fill="#a59fff" font-size="17" font-weight="700">github.com/Q-pipelinelabai/QCognitiveLayer</text>
+  <text x="540" y="935" text-anchor="middle" fill="#32364e" font-size="12">Python module · REST sidecar · MIT license · Open source</text>
+
+  <!-- ══ HASHTAGS ══ -->
+  <text x="540" y="988" text-anchor="middle" fill="#22253a" font-size="13">#OpenSource   #LLM   #AI   #Python   #MachineLearning   #NLP</text>
+
+  <!-- BOTTOM BAR -->
+  <rect x="0" y="1064" width="1080" height="16" fill="#7c6cf0" opacity="0.5"/>
+
+</svg>
